@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>DevFolio | Full-Stack Web Developer</title>
+        <title>Ansh Kumar | Full-Stack Web Developer</title>
         <meta name="description" content="Portfolio of a full-stack web developer specializing in React, Node.js, and modern web technologies." />
       </Helmet>
       

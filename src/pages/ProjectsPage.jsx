@@ -8,7 +8,7 @@ const ProjectsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Projects | DevFolio</title>
+        <title>Projects | Ansh Kumar</title>
         <meta name="description" content="Explore my web development projects including full-stack applications, websites, and more." />
       </Helmet>
       

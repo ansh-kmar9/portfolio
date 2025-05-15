@@ -30,7 +30,7 @@ const BlogDetailPage = () => {
   return (
     <>
       <Helmet>
-        <title>{blog.title} | DevFolio</title>
+        <title>{blog.title} | Ansh Kumar</title>
         <meta name="description" content={blog.excerpt} />
       </Helmet>
       

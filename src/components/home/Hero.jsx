@@ -1,21 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaFileAlt } from 'react-icons/fa';
-import { TypeAnimation } from 'react-type-animation';
-import devAnimation from '../../assets/images/developer.webp';
-import { FaReact, FaNodeJs, FaGithub } from 'react-icons/fa';
+import { FaArrowRight, FaFileAlt, FaReact, FaNodeJs, FaGithub } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
 import { SiExpress } from 'react-icons/si';
-import InfiniteScroll from './InfiniteScroll';
+import { TypeAnimation } from 'react-type-animation';
+import devAnimation from '../../assets/images/giphy2.gif';
 
 const Hero = () => {
   return (
     <section className="pt-2 sm:pt-12 md:pt-24 pb-8 sm:pb-16 md:pb-20 min-h-[calc(100vh-4rem)]">
       <div className="container h-full flex flex-col justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center relative">
-          {/* Vertical Line (only visible on md screens and up) */}
-          <div className="hidden md:block absolute h-[70%] w-px bg-white/10 left-1/2 top-1/2 transform -translate-y-1/2"></div>
+          
+          {/* Dotted Vertical Line */}
+          <div className="hidden md:block absolute h-[70%] border-l-2 border-dotted border-white/30 left-1/2 top-1/2 transform -translate-y-1/2"></div>
           
           {/* Left Content */}
           <motion.div
@@ -29,19 +28,14 @@ const Hero = () => {
                 Hi, I'm <span className="text-white">Ansh Kumar</span>
               </h1>
 
-              {/* Typing Effect */}
               <h2 className="text-base sm:text-lg md:text-xl text-white/80">
                 Your friendly neighborhood{' '}
                 <TypeAnimation
                   sequence={[
-                    'Engineer',
-                    2000,
-                    'Gamer',
-                    2000,
-                    'Coder',
-                    2000,
-                    'Developer',
-                    2000,
+                    'Engineer', 2000,
+                    'Gamer', 2000,
+                    'Coder', 2000,
+                    'Developer', 2000,
                   ]}
                   wrapper="span"
                   speed={50}
@@ -52,7 +46,6 @@ const Hero = () => {
               </h2>
             </div>
 
-            {/* Sub info */}
             <div className="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs sm:text-sm text-white/70">
               <span className="mr-2">Based in India</span>
               <div className="h-4 w-px bg-white/20"></div>
@@ -64,7 +57,7 @@ const Hero = () => {
               My goal is to build solutions that offer both exceptional performance and a delightful user experience.
             </p>
 
-            {/* Call to Actions - Shadcn UI Style */}
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto">
               <Link 
                 to="/projects" 
@@ -84,29 +77,26 @@ const Hero = () => {
               </a>
             </div>
 
-            {/* Tech Stack Icons - Centered on mobile */}
+            {/* Tech Stack Icons */}
             <div className="flex justify-center sm:justify-start flex-wrap gap-3 pt-2 sm:pt-4">
-              <motion.div whileHover={{ y: -2 }} className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-md bg-[#121212] border border-white/10">
-                <FaReact className="text-white text-sm sm:text-lg" title="React" />
-              </motion.div>
-              <motion.div whileHover={{ y: -2 }} className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-md bg-[#121212] border border-white/10">
-                <SiExpress className="text-white text-sm sm:text-lg" title="Express" />
-              </motion.div>
-              <motion.div whileHover={{ y: -2 }} className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-md bg-[#121212] border border-white/10">
-                <DiMongodb className="text-white text-sm sm:text-lg" title="MongoDB" />
-              </motion.div>
-              <motion.div whileHover={{ y: -2 }} className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-md bg-[#121212] border border-white/10">
-                <FaNodeJs className="text-white text-sm sm:text-lg" title="Node.js" />
-              </motion.div>
+              {[FaReact, SiExpress, DiMongodb, FaNodeJs].map((Icon, idx) => (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -2 }}
+                  className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-md bg-[#121212] border border-white/10"
+                >
+                  <Icon className="text-white text-sm sm:text-lg" />
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
-          {/* Right Content - Image */}
+          {/* Right Content */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex justify-center md:justify-end md:pr-12 mt-5 md:mt-0"
+            className="flex justify-center md:justify-end md:pl-12 mt-5 md:mt-0"
           >
             <div className="relative overflow-hidden">
               <img
@@ -117,6 +107,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/20 to-transparent opacity-30"></div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

@@ -55,7 +55,7 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Me | DevFolio</title>
+        <title>About Me | Ansh Kumar</title>
         <meta name="description" content="Learn about my skills, experience, and education as a full-stack web developer." />
       </Helmet>
 

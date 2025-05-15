@@ -7,7 +7,7 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Me | DevFolio</title>
+        <title>Contact Me | Ansh Kumar</title>
         <meta name="description" content="Get in touch with me for project inquiries, collaborations, or just to say hello." />
       </Helmet>
       

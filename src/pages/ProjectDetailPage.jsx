@@ -23,7 +23,7 @@ const ProjectDetailPage = () => {
   return (
     <>
       <Helmet>
-        <title>{project.title} | DevFolio</title>
+        <title>{project.title} | Ansh Kumar</title>
         <meta name="description" content={project.description} />
       </Helmet>
       

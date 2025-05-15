@@ -8,7 +8,7 @@ const BlogPage = () => {
   return (
     <>
       <Helmet>
-        <title>Blog | DevFolio</title>
+        <title>Blog | Ansh Kumar</title>
         <meta name="description" content="Articles and tutorials about web development, JavaScript, React, and more." />
       </Helmet>
       
