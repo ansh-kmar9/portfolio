@@ -14,8 +14,8 @@ export const projects = [
       "A full-stack room booking platform for students and scholars to find, list, and review long-term accommodations.",
     image: scholarsuites, // Update with actual path
     tags: ["Node.js", "Express", "MongoDB", "EJS", "JavaScript", "Bootstrap"],
-    demoLink: "https://scholarsuites-demo.com", // Replace with actual link
-    githubLink: "https://github.com/username/scholar-suites", // Replace with actual link
+    demoLink: "https://github.com/ansh-kmar9/Scholar-Suites", 
+    githubLink: "https://github.com/ansh-kmar9/Scholar-Suites", 
     featured: true,
     role: "Full-Stack Developer",
     challenges:
@@ -37,10 +37,10 @@ export const projects = [
     title: "Meetly",
     description:
       "A secure and user-friendly video conferencing platform with real-time chat, meeting scheduling, and screen sharing features.",
-    image: meetly, // Replace with your actual image path
+    image: meetly, 
     tags: ["React", "Socket.io", "WebRTC", "Node.js", "Express", "MongoDB"],
-    demoLink: "https://meetly-demo.com", // Replace with your actual demo link
-    githubLink: "https://github.com/username/meetly", // Replace with your actual GitHub link
+    demoLink: "https://github.com/ansh-kmar9/Meetly", 
+    githubLink: "https://github.com/ansh-kmar9/Meetly", 
     featured: true,
     role: "Full-Stack Developer",
     challenges:
@@ -64,10 +64,10 @@ export const projects = [
     title: "DSA Sheet Tracker",
     description:
       "An interactive platform for tracking progress through curated DSA problem sets categorized by topic and difficulty.",
-      image: dsasheet, // Replace with your actual image path
+      image: dsasheet,
     tags: ["React", "LocalStorage", "Bootstrap", "JavaScript"],
-    demoLink: "https://dsasheet-demo.com", // Replace with your actual demo link
-    githubLink: "https://github.com/username/dsa-sheet-tracker", // Replace with your actual GitHub repo
+    demoLink: "https://www.dsasheet.site/", // Replace with your actual demo link
+    githubLink: "https://github.com/ansh-kmar9/DSA-Sheet", // Replace with your actual GitHub repo
     featured: false,
     role: "Frontend Developer",
     challenges:
@@ -92,8 +92,8 @@ export const projects = [
       "A classic memory-based game where users must repeat an increasingly long sequence of colors and sounds.",
     image: simon, // Replace with your actual image path
     tags: ["HTML", "CSS", "JavaScript"],
-    demoLink: "https://simonsays-demo.com", // Replace with your actual demo link
-    githubLink: "https://github.com/username/simon-says-game", // Replace with your actual GitHub repo
+    demoLink: "https://simon-game-jet-eight.vercel.app/", // Replace with your actual demo link
+    githubLink: "https://github.com/ansh-kmar9/simon-game", // Replace with your actual GitHub repo
     featured: false,
     role: "Frontend Developer",
     challenges:
@@ -116,8 +116,8 @@ export const projects = [
       "A visual tool that demonstrates how the N-Queen problem is solved using backtracking algorithms.",
     image: nqueen, // Replace with your actual image path
     tags: ["HTML", "CSS", "JavaScript", "Algorithms"],
-    demoLink: "https://nqueen-visualizer-demo.com", // Replace with your actual live link
-    githubLink: "https://github.com/username/n-queen-visualizer", // Replace with your actual GitHub repo
+    demoLink: "https://m-queen-visualiser.vercel.app/", // Replace with your actual live link
+    githubLink: "https://github.com/ansh-kmar9/m-queen-visualiser", // Replace with your actual GitHub repo
     featured: false,
     role: "Frontend Developer",
     challenges:
@@ -140,7 +140,7 @@ export const projects = [
       "A conceptual design project showcasing a modern and intuitive tech product discovery platform, crafted with detailed wireframes and high-fidelity mockups in Figma.",
     image: techhiveMockup, // Replace with actual path to Figma mockup image
     tags: ["Figma", "UX/UI Design", "Wireframing", "Prototyping", "User Flows"],
-    demoLink: "https://www.figma.com/file/your-techhive-link", // Replace with actual Figma link
+    demoLink: "https://www.figma.com/design/61maH5YRsSiT151S4Xy9Vf/High-Fidility--TechHive-?node-id=1-4&p=f", // Replace with actual Figma link
     githubLink: "", // Optional or leave empty if not applicable
     featured: false,
     role: "UI/UX Designer",

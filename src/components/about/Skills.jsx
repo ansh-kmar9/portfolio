@@ -1,18 +1,22 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { 
-  FaReact, FaNodeJs, FaDatabase, FaTools, 
-  FaHtml5, FaCss3Alt, FaJs, FaVuejs, FaAngular, 
-  FaAws, FaDocker, FaGitAlt 
+import {
+  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs,
+  FaAngular, FaGitAlt, FaDocker, FaAws, FaGithub,
+  FaFigma, FaLaravel, FaPhp, FaCode
 } from 'react-icons/fa';
-import { SiTypescript, SiMongodb, SiPostgresql, SiRedux, SiFirebase } from 'react-icons/si';
+import {
+  SiTypescript, SiMongodb, SiRedux, SiFirebase,
+  SiTailwindcss, SiBootstrap, SiNextdotjs, SiEjs,
+  SiMysql, SiPostman
+} from 'react-icons/si';
+import { MdOutlineSmartToy } from 'react-icons/md';
 
 const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-  // Skill categories
   const skillCategories = [
     {
       category: "Frontend",
@@ -20,10 +24,14 @@ const Skills = () => {
         { name: "React", icon: <FaReact /> },
         { name: "JavaScript", icon: <FaJs /> },
         { name: "TypeScript", icon: <SiTypescript /> },
-        { name: "HTML5/CSS3", icon: <FaHtml5 /> },
+        { name: "HTML5", icon: <FaHtml5 /> },
+        { name: "CSS3", icon: <FaCss3Alt /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+        { name: "Bootstrap", icon: <SiBootstrap /> },
+        { name: "Angular", icon: <FaAngular /> },
         { name: "Redux", icon: <SiRedux /> },
-        { name: "Vue.js", icon: <FaVuejs /> },
-        { name: "Angular", icon: <FaAngular /> }
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "EJS", icon: <SiEjs /> }
       ]
     },
     {
@@ -32,20 +40,25 @@ const Skills = () => {
         { name: "Node.js", icon: <FaNodeJs /> },
         { name: "Express.js", icon: <FaNodeJs /> },
         { name: "MongoDB", icon: <SiMongodb /> },
-        { name: "PostgreSQL", icon: <SiPostgresql /> },
+        { name: "SQL", icon: <SiMysql /> },
         { name: "Firebase", icon: <SiFirebase /> },
-        { name: "REST API", icon: <FaDatabase /> },
-        { name: "GraphQL", icon: <FaDatabase /> }
+        { name: "REST API", icon: <FaCode /> },
+        { name: "PHP", icon: <FaPhp /> },
+        { name: "Laravel", icon: <FaLaravel /> },
+        { name: "Blade", icon: <FaCode /> }
       ]
     },
     {
       category: "Tools & Deployment",
       skills: [
         { name: "Git", icon: <FaGitAlt /> },
+        { name: "GitHub", icon: <FaGithub /> },
         { name: "Docker", icon: <FaDocker /> },
         { name: "AWS", icon: <FaAws /> },
-        { name: "CI/CD", icon: <FaTools /> },
-        { name: "Testing", icon: <FaTools /> }
+        { name: "Postman", icon: <SiPostman /> },
+        { name: "Figma", icon: <FaFigma /> },
+        { name: "AI", icon: <MdOutlineSmartToy /> },
+        { name: "Testing", icon: <FaCode /> }
       ]
     }
   ];
@@ -71,8 +84,8 @@ const Skills = () => {
 
               <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1.5 sm:gap-2">
                 {category.skills.map((skill, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="flex items-center gap-2 group p-1.5 rounded-md hover:bg-[#121212]/60 transition-colors duration-200"
                   >
                     <div className="flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-md bg-[#121212] border border-[#262626] group-hover:border-white/20 transition-colors duration-200">
@@ -89,7 +102,6 @@ const Skills = () => {
         </div>
       </div>
 
-      {/* Progress Indicator - Responsive */}
       <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-[#1E1E1E]">
         <h3 className="text-xs sm:text-sm font-medium text-white/70 mb-3 sm:mb-4">Core Proficiency</h3>
         <div className="space-y-3 sm:space-y-4">
@@ -104,7 +116,7 @@ const Skills = () => {
                 <span className="text-[10px] sm:text-xs text-white/50">{item.value}%</span>
               </div>
               <div className="h-1 sm:h-1.5 w-full bg-[#121212] rounded-full overflow-hidden">
-                <div 
+                <div
                   className="h-full bg-white/80 rounded-full"
                   style={{ width: `${item.value}%` }}
                 ></div>

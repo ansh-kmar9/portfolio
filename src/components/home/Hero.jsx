@@ -106,7 +106,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex justify-center md:justify-start md:pl-12 mt-5 md:mt-0"
+            className="flex justify-center md:justify-end md:pr-12 mt-5 md:mt-0"
           >
             <div className="relative overflow-hidden">
               <img

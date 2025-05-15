@@ -1,11 +1,17 @@
 // data/blogs.js
+
+import blog1 from "../assets/images/blog1.png";
+import blog2 from "../assets/images/blog2.png";
+import blog3 from "../assets/images/blog3.png";
+import blog4 from "../assets/images/blog4.png";
+
 export const blogs = [
     {
       id: "react-performance-optimization",
       title: "10 React Performance Optimization Techniques",
       date: "2023-09-15",
       excerpt: "Learn how to optimize your React applications for better performance with these essential techniques.",
-      coverImage: "/assets/images/blogs/react-performance.jpg",
+      coverImage: blog1,
       readTime: 8,
       tags: ["React", "Performance", "JavaScript", "Web Development"],
       content: `# 10 React Performance Optimization Techniques
@@ -103,7 +109,7 @@ export const blogs = [
       title: "A Comprehensive Guide to TypeScript with React",
       date: "2023-08-22",
       excerpt: "Explore how to effectively use TypeScript in your React projects to create more maintainable and error-free code.",
-      coverImage: "/assets/images/blogs/typescript-react.jpg",
+      coverImage: blog2,
       readTime: 12,
       tags: ["TypeScript", "React", "JavaScript", "Web Development"],
       content: `# A Comprehensive Guide to TypeScript with React
@@ -234,7 +240,7 @@ export const blogs = [
       title: "Mastering CSS Grid: From Basics to Advanced Layouts",
       date: "2023-07-10",
       excerpt: "A complete guide to CSS Grid layout with practical examples for building complex, responsive web layouts.",
-      coverImage: "/assets/images/blogs/css-grid.jpg",
+      coverImage: blog3,
       readTime: 10,
       tags: ["CSS", "Web Design", "Responsive Design", "Frontend"],
       content: `# Mastering CSS Grid: From Basics to Advanced Layouts
@@ -365,7 +371,7 @@ export const blogs = [
       title: "Building a RESTful API with Node.js and Express",
       date: "2023-06-05",
       excerpt: "Learn how to create a robust RESTful API using Node.js, Express, and MongoDB with best practices for authentication and error handling.",
-      coverImage: "/assets/images/blogs/nodejs-api.jpg",
+      coverImage: blog4,
       readTime: 15,
       tags: ["Node.js", "Express", "API", "MongoDB", "Backend"],
       // data/blogs.js (continued)

@@ -8,38 +8,40 @@ import {
   FaDiscord,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const SocialLinks = () => {
   const socialLinks = [
     {
       name: "Email",
       icon: <FaEnvelope className="text-white/90 text-lg" />,
-      link: "mailto:contact@example.com",
-      text: "contact@example.com",
+      link: "mailto:anshkmr991@gmail.com",
+      text: "anshkmr991@gmail.com",
     },
     {
       name: "LinkedIn",
       icon: <FaLinkedin className="text-white/90 text-lg" />,
-      link: "https://linkedin.com/in/yourusername",
-      text: "linkedin.com/in/yourusername",
+      link: "https://www.linkedin.com/in/anshkmr/",
+      text: "linkedin.com/in/anshkmr",
     },
     {
       name: "GitHub",
       icon: <FaGithub className="text-white/90 text-lg" />,
-      link: "https://github.com/yourusername",
-      text: "github.com/yourusername",
+      link: "https://github.com/ansh-kmar9",
+      text: "github.com/ansh-kmar9",
     },
     {
-      name: "Twitter",
-      icon: <FaTwitter className="text-white/90 text-lg" />,
-      link: "https://twitter.com/yourusername",
-      text: "@yourusername",
-    },
+      name: "X",
+      icon: <FaXTwitter className="text-white/90 text-lg" />,
+      link: "https://x.com/anshkmar999",
+      text: "@anshkmar999",
+    }, 
+    
     {
       name: "Discord",
       icon: <FaDiscord className="text-white/90 text-lg" />,
       link: "https://discord.com",
-      text: "username#0000",
+      text: "theansh6647",
     },
   ];
 
@@ -59,7 +61,7 @@ const SocialLinks = () => {
           <FaMapMarkerAlt className="text-white/80 mt-1 text-base" />
           <div>
             <h3 className="font-medium text-sm text-white/90">Location</h3>
-            <p className="text-white/60 text-sm">San Francisco, California</p>
+            <p className="text-white/60 text-sm">Punjab, India</p>
           </div>
         </div>
         <p className="text-white/70 text-sm leading-relaxed">
