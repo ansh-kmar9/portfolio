@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark text-white;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .glass {
+    @apply bg-dark-lighter/70 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg bg-primary hover:bg-primary-dark text-white font-medium flex items-center gap-2 transition-all;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg border border-white/20 hover:border-primary/70 hover:bg-dark-lighter/50 text-white font-medium flex items-center gap-2 transition-all;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-16 relative;
+  }
+  
+  .section-title::after {
+    content: "";
+    @apply absolute w-20 h-1 bg-primary rounded-full bottom-[-0.75rem] left-1/2 -translate-x-1/2;
+  }
+}
+
+.glass:hover {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.slider-container {
+  background: transparent;
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  background: transparent;
+  height: 100px;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-track {
+  animation: scroll 25s linear infinite;
+  display: flex;
+  align-items: center;
+  width: calc(150px * 28); /* Adjust based on number of icons */
+}
+
+.slide {
+  height: 100px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem; /* Adjust icon size */
+  transition: all 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 14)); /* Adjust based on half of total width */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slide {
+    width: 100px;
+    font-size: 2rem;
+  }
+  
+  .slide-track {
+    width: calc(100px * 28);
+  }
+  
+  @keyframes scroll {
+    100% {
+      transform: translateX(calc(-100px * 14));
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    width: 80px;
+    font-size: 1.5rem;
+  }
+  
+  .slide-track {
+    width: calc(80px * 28);
+  }
+  
+  @keyframes scroll {
+    100% {
+      transform: translateX(calc(-80px * 14));
+    }
+  }
 }
