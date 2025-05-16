@@ -107,8 +107,10 @@ const Skills = () => {
         <div className="space-y-3 sm:space-y-4">
           {[
             { name: "Frontend Development", value: 90 },
-            { name: "Backend Development", value: 85 },
-            { name: "UI/UX Design", value: 75 }
+            { name: "Backend Development", value: 90 },
+            { name: "System Design", value: 85 },
+            { name: "UI/UX Design", value: 85 },
+            
           ].map((item, i) => (
             <div key={i} className="space-y-1 sm:space-y-1.5">
               <div className="flex items-center justify-between">
