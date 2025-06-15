@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 import ProjectCard from '../components/projects/ProjectCard';
 import { projects } from '../data/projects';
 
 const ProjectsPage = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+
   return (
     <>
       <Helmet>

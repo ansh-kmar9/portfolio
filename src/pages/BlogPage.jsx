@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 import BlogCard from '../components/blog/BlogCard';
 import { blogs } from '../data/blogs';
 
 const BlogPage = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+
   return (
     <>
       <Helmet>
@@ -12,7 +19,6 @@ const BlogPage = () => {
         <meta name="description" content="Articles and tutorials about web development, JavaScript, React, and more." />
       </Helmet>
       
-      {/* Virtually no top space on mobile */}
       <section className="pt-0 xs:pt-1 sm:pt-3 md:pt-6 px-1 xs:px-2 sm:px-4 md:px-6">
         <div className="container mx-auto max-w-[99%] xs:max-w-[98%] sm:max-w-[95%] lg:max-w-6xl">
           <div className="mb-2 sm:mb-4 md:mb-6">
