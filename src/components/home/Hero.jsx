@@ -8,37 +8,25 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   useEffect(() => {
-    // Inject Spline viewer script
     const script = document.createElement("script");
     script.type = "module";
     script.src = "https://unpkg.com/@splinetool/viewer@1.10.13/build/spline-viewer.js";
     document.body.appendChild(script);
 
-    // Remove "Built with Spline" branding
-    const observer = new MutationObserver(() => {
-      const viewer = document.querySelector("spline-viewer");
-      if (viewer?.shadowRoot) {
-        const branding = Array.from(viewer.shadowRoot.querySelectorAll("div")).find(div =>
-          div?.textContent?.toLowerCase().includes("spline.design")
-        );
-        if (branding) {
-          branding.remove();
-          observer.disconnect();
-        }
-      }
-    });
-
+    // Repeatedly check and remove branding once visible
     const interval = setInterval(() => {
       const viewer = document.querySelector("spline-viewer");
       if (viewer?.shadowRoot) {
-        observer.observe(viewer.shadowRoot, { childList: true, subtree: true });
-        clearInterval(interval);
+        const logo = viewer.shadowRoot.querySelector("#logo");
+        if (logo) {
+          logo.remove(); 
+          clearInterval(interval);
+        }
       }
     }, 500);
 
     return () => {
       document.body.removeChild(script);
-      observer.disconnect();
       clearInterval(interval);
     };
   }, []);
@@ -131,7 +119,7 @@ const Hero = () => {
           >
             <div className="relative w-full max-w-[500px] h-[380px] rounded-lg overflow-hidden shadow-md">
               <spline-viewer
-                url="https://prod.spline.design/d6mX-4CKY-2Ptd2Y/scene.splinecode"
+                url="https://prod.spline.design/HQbqmmt0QS-fQQ5R/scene.splinecode"
                 style={{
                   width: "100%",
                   height: "100%",
