@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaLink } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaLink } from "react-icons/fa";
 
 const BlogCard = ({ blog, index }) => {
   const [copied, setCopied] = useState(false);
 
   const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { year: "numeric", month: "long", day: "numeric" };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
@@ -31,7 +31,6 @@ const BlogCard = ({ blog, index }) => {
         <div className="p-3 xs:p-4 sm:p-5 flex-grow flex flex-col">
           {/* Date and Time */}
           <div className="flex flex-wrap justify-between items-center text-[10px] xs:text-xs text-white/60 mb-1.5 sm:mb-2">
-            <span className="truncate mr-3">{formatDate(blog.date)}</span>
             <span className="flex items-center shrink-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +53,10 @@ const BlogCard = ({ blog, index }) => {
 
           {/* Title */}
           <h3 className="font-medium text-sm xs:text-base sm:text-lg text-white/95 line-clamp-2 mb-1.5 sm:mb-2">
-            <Link to={`/blog/${blog.id}`} className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 rounded">
+            <Link
+              to={`/blog/${blog.id}`}
+              className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 rounded"
+            >
               {blog.title}
             </Link>
           </h3>
@@ -66,14 +68,16 @@ const BlogCard = ({ blog, index }) => {
 
           {/* Tags */}
           <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-2 sm:mb-3">
-            {blog.tags.slice(0, window.innerWidth < 400 ? 2 : 3).map((tag, i) => (
-              <span
-                key={i}
-                className="inline-flex items-center rounded-sm bg-[#121212] px-1.5 py-0.5 text-[9px] xs:text-[10px] sm:text-xs text-white/70 ring-1 ring-inset ring-[#262626]"
-              >
-                {tag}
-              </span>
-            ))}
+            {blog.tags
+              .slice(0, window.innerWidth < 400 ? 2 : 3)
+              .map((tag, i) => (
+                <span
+                  key={i}
+                  className="inline-flex items-center rounded-sm bg-[#121212] px-1.5 py-0.5 text-[9px] xs:text-[10px] sm:text-xs text-white/70 ring-1 ring-inset ring-[#262626]"
+                >
+                  {tag}
+                </span>
+              ))}
             {blog.tags.length > (window.innerWidth < 400 ? 2 : 3) && (
               <span className="inline-flex items-center rounded-sm bg-[#121212] px-1.5 py-0.5 text-[9px] xs:text-[10px] sm:text-xs text-white/50 ring-1 ring-inset ring-[#262626]">
                 +{blog.tags.length - (window.innerWidth < 400 ? 2 : 3)}
@@ -127,15 +131,15 @@ const BlogCard = ({ blog, index }) => {
             className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-[#1E1E1E] border border-[#333333] text-white/90 px-4 py-2 rounded-md shadow-md z-50 text-xs sm:text-sm"
           >
             <div className="flex items-center gap-2">
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="16" 
-                height="16" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
                 strokeLinejoin="round"
                 className="text-white/70"
               >
