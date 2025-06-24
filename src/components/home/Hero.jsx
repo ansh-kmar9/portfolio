@@ -10,7 +10,8 @@ const Hero = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.type = "module";
-    script.src = "https://unpkg.com/@splinetool/viewer@1.10.13/build/spline-viewer.js";
+    script.src =
+      "https://unpkg.com/@splinetool/viewer@1.10.13/build/spline-viewer.js";
     document.body.appendChild(script);
 
     // Repeatedly check and remove branding once visible
@@ -19,7 +20,7 @@ const Hero = () => {
       if (viewer?.shadowRoot) {
         const logo = viewer.shadowRoot.querySelector("#logo");
         if (logo) {
-          logo.remove(); 
+          logo.remove();
           clearInterval(interval);
         }
       }
@@ -35,7 +36,6 @@ const Hero = () => {
     <section className="relative pt-2 sm:pt-12 md:pt-24 pb-8 sm:pb-16 md:pb-20 min-h-[calc(100vh-4rem)]">
       <div className="container h-full flex flex-col justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center relative">
-
           {/* Dotted Line */}
           <div className="hidden md:block absolute h-[70%] border-l-2 border-dotted border-white/30 left-1/2 top-1/2 transform -translate-y-1/2"></div>
 
@@ -54,7 +54,16 @@ const Hero = () => {
               <h2 className="text-base sm:text-lg md:text-xl text-white/80">
                 Your friendly neighborhood{" "}
                 <TypeAnimation
-                  sequence={["Engineer", 2000, "Gamer", 2000, "Coder", 2000, "Developer", 2000]}
+                  sequence={[
+                    "Engineer",
+                    2000,
+                    "Gamer",
+                    2000,
+                    "Coder",
+                    2000,
+                    "Developer",
+                    2000,
+                  ]}
                   wrapper="span"
                   speed={50}
                   repeat={Infinity}
@@ -71,8 +80,9 @@ const Hero = () => {
             </div>
 
             <p className="text-sm sm:text-base text-white/70 max-w-lg leading-relaxed">
-              I'm a full-stack developer who loves crafting clean, scalable web applications.
-              My goal is to build solutions that offer both exceptional performance and a delightful user experience.
+              I'm a full-stack developer who loves crafting clean, scalable web
+              applications. My goal is to build solutions that offer both
+              exceptional performance and a delightful user experience.
             </p>
 
             {/* Buttons */}
@@ -85,7 +95,7 @@ const Hero = () => {
                 <FaArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
               </Link>
 
-              <a
+              {/* <a
                 href="/assets/resumee.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -93,6 +103,21 @@ const Hero = () => {
               >
                 Resume
                 <FaFileAlt className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+              </a> */}
+              <a
+                // href removed to disable link behavior
+                // disabled behavior simulated
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium transition-colors border border-white/20 bg-white/5 text-white h-9 sm:h-10 px-3 sm:px-4 py-2
+             cursor-not-allowed hover:cursor-not-allowed
+             relative group"
+                onClick={(e) => e.preventDefault()} // prevent navigation
+              >
+                Resume
+                <FaFileAlt className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+                {/* Tooltip on hover */}
+                <span className="absolute bottom-full mb-1 text-white text-[10px] bg-black bg-opacity-70 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  Updating soon
+                </span>
               </a>
             </div>
 
