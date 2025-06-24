@@ -27,7 +27,7 @@ const BlogPage = () => {
                 My Blog
               </h1>
               <p className="text-[10px] xs:text-xs sm:text-sm text-white/70 mb-1 sm:mb-2">
-                Articles and thoughts on web development
+                Articles and thoughts on web development and System Design
               </p>
               <p className="text-[9px] xs:text-[10px] sm:text-xs text-white/60 italic">
                 Click on the title or read more to view the full article
