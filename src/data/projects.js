@@ -6,8 +6,59 @@ import wanderstay from "../assets/images/wanderStay.png";
 import techhiveMockup from "../assets/images/techhiveMockup.png";
 import meetly from "../assets/images/meetly.png";
 import inquira from "../assets/images/inquira.png";
+import stockflow from "../assets/images/stockflow.png";
 
 export const projects = [
+  {
+    id: "stockflow",
+    title: "StockFlow",
+    description:
+      "A full-stack stock portfolio management platform with real-time analytics, secure authentication, and a modern dashboard for tracking holdings, orders, and positions.",
+    image: stockflow, // Replace with actual image path
+    tags: [
+      "MongoDB",
+      "Express.js",
+      "Node.js",
+      "React",
+      "Context API",
+      "REST APIs",
+      "JWT Authentication",
+      "Mongoose",
+      "Charts.js",
+      "Responsive UI",
+      "Modular Architecture",
+      "Authorization",
+      "Data Visualization",
+      "Session Management",
+      "Protected Routes",
+    ],
+    demoLink: "https://stockflow-frontend.netlify.app/", // Replace with actual demo link if available
+    githubLink: "https://github.com/ansh-kmar9/Stock-Flow", // Replace with your actual GitHub repo link
+    featured: true,
+    role: "Full-Stack Developer",
+    challenges:
+      "Implementing real-time data updates, managing secure user authentication and authorization, designing a responsive and intuitive dashboard, and ensuring robust data validation and error handling across the stack.",
+    solutions:
+      "Utilized JWT for secure authentication and protected routes, implemented modular REST APIs with Express and Mongoose, leveraged React Context API for global state management, and integrated Chart.js for dynamic data visualization. Ensured responsive design with modern CSS and handled edge cases with comprehensive validation and error feedback. Used MongoDB for scalable data storage and designed a clear separation between backend, dashboard, and landing page for maintainability.",
+
+    longDescription: `StockFlow is a comprehensive, production-ready web application for managing stock portfolios. It enables users to track their holdings, positions, orders, and funds with real-time updates and insightful analytics.
+
+🔧 Key Features & Highlights:
+
+• Modular backend built with Express.js, Mongoose, and MongoDB for robust data management  
+• RESTful APIs for all core resources: users, holdings, orders, and positions  
+• Secure user authentication and authorization using JWT and protected routes  
+• Real-time dashboard with React, featuring dynamic charts and visualizations  
+• Global state management via React Context API for seamless data flow  
+• Responsive, modern UI for both dashboard and landing page  
+• Comprehensive error handling and user feedback for smooth UX  
+• Data validation on both client and server sides  
+• Watchlist, funds management, and reviewable order history  
+• Clean separation of concerns: backend API, dashboard app, and marketing frontend  
+• Scalable architecture ready for production deployment  
+
+StockFlow demonstrates real-world full-stack development skills, with a focus on **security**, **usability**, and **scalability**. The project showcases expertise in backend API design, authentication, data modeling, frontend state management, and user-centric UI/UX. It is a strong addition to any developer portfolio, highlighting the ability to deliver complex, production-grade web applications.`,
+  },
   {
     id: "wanderstay",
     title: "WanderStay",
