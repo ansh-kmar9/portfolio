@@ -162,29 +162,45 @@ This project reflects real-world full-stack architecture, with special attention
 Meetly demonstrates strong expertise in full-stack real-time communication systems, authentication workflows, and modern React development with fast builds via Vite. It’s a technically challenging and complete product reflecting real-world applications like Zoom or Google Meet.`,
   },
   {
-    id: "dsa-sheet",
+    id: "dsa-sheet-tracker",
     title: "DSA Sheet Tracker",
     description:
-      "An interactive platform for tracking progress through curated DSA problem sets categorized by topic and difficulty.",
+      "A comprehensive full-stack platform for tracking progress across multiple curated DSA problem sheets with AI-powered learning assistance.",
     image: dsasheet,
-    tags: ["React", "LocalStorage", "Bootstrap", "JavaScript"],
-    demoLink: "https://www.dsasheet.site/", // Replace with your actual demo link
-    githubLink: "https://github.com/ansh-kmar9/DSA-Sheet", // Replace with your actual GitHub repo
-    featured: false,
-    role: "Frontend Developer",
+    tags: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "TailwindCSS",
+      "Google OAuth",
+      "AI Integration",
+    ],
+    demoLink: "https://www.dsasheet.site/sheet",
+    githubLink: "https://github.com/ansh-kmar9/Ai-Powred-Dsa-Sheet",
+    featured: true,
+    role: "Full-Stack Developer",
     challenges:
-      "Managing persistent user progress without backend integration and providing a smooth user experience for navigating through problems.",
+      "Building a scalable full-stack application with user authentication, progress persistence across multiple devices, real-time progress tracking, and integrating AI-powered doubt solving while maintaining optimal performance.",
     solutions:
-      "Used LocalStorage for progress tracking and created dynamic filters, topic-wise breakdowns, and progress indicators for better usability.",
-    longDescription: `This DSA Sheet Tracker helps aspiring programmers systematically practice and track their data structures and algorithms journey. Features include:
+      "Implemented Google OAuth for secure authentication, MongoDB for scalable data storage, React Context for state management, and integrated Google AI API for intelligent doubt resolution. Used responsive design patterns and efficient data structures for smooth user experience.",
+    longDescription: `A comprehensive DSA learning platform designed to help developers systematically master data structures and algorithms. The platform offers a complete learning ecosystem with the following features:
+
+  • **Multiple Curated Sheets**: Track progress across 5 different problem collections - DSA360 (180 problems), SDE Sheet (389 problems), Blind75 (75 essential problems), Interview Questions, and Supreme Sheet
   
-    • Curated list of DSA problems categorized by topic (e.g., Arrays, Trees, Graphs, etc.)  
-    • Status tracking for solved, unsolved, and bookmarked problems  
-    • Filtering by difficulty and topic  
-    • Visual progress indicators for each category  
-    • Responsive UI for mobile and desktop  
-    • Persistent local storage to save user progress  
-    • Clean and minimal design focused on learning efficiency`,
+  • **Smart Progress Tracking**: Persistent progress tracking with visual indicators, completion percentages, and detailed statistics across all sheets
+  
+  • **AI-Powered Doubt Solver**: Integrated Google AI for instant help with problem-solving, explanations, and coding assistance
+  
+  • **Interactive Dashboard**: Real-time overview of learning progress, achievements, badges, and personalized recommendations
+  
+  • **Authentication & Security**: Google OAuth integration for secure user management and cross-device progress synchronization
+  
+  • **Responsive Design**: Optimized for desktop and mobile with dark theme and clean, distraction-free interface
+  
+  • **Advanced Features**: Question filtering by difficulty and topic, search functionality, reset options, and detailed progress analytics
+  
+  • **Modern Tech Stack**: Built with React + Vite, Express.js, MongoDB, TailwindCSS, and deployed on Vercel + Render for optimal performance`,
   },
   {
     id: "inquira",
