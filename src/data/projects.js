@@ -176,7 +176,7 @@ Meetly demonstrates strong expertise in full-stack real-time communication syste
       "Google OAuth",
       "AI Integration",
     ],
-    demoLink: "https://www.dsasheet.site/sheet",
+    demoLink: "https://www.dsasheet.site/",
     githubLink: "https://github.com/ansh-kmar9/Ai-Powred-Dsa-Sheet",
     featured: true,
     role: "Full-Stack Developer",
