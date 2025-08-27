@@ -35,7 +35,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "predeploy:user": "npm run build",
-    "deploy:user": "gh-pages -d build -b main -r https://github.com/ansh-kmar9/ansh-kmar9.github.io.git",
+    "deploy:user": "gh-pages -d build -r https://github.com/ansh-kmar9/ansh-kmar9.github.io.git",
     "postbuild": "node scripts/copy404.js"
   },
   "eslintConfig": {

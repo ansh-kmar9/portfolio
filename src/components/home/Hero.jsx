@@ -105,19 +105,13 @@ const Hero = () => {
                 <FaFileAlt className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
               </a> */}
               <a
-                // href removed to disable link behavior
-                // disabled behavior simulated
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium transition-colors border border-white/20 bg-white/5 text-white h-9 sm:h-10 px-3 sm:px-4 py-2
-             cursor-not-allowed hover:cursor-not-allowed
-             relative group"
-                onClick={(e) => e.preventDefault()} // prevent navigation
+                href="/Ansh_kumar.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium transition-colors border border-white/20 bg-white/5 text-white h-9 sm:h-10 px-3 sm:px-4 py-2 hover:bg-white/10"
               >
                 Resume
                 <FaFileAlt className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
-                {/* Tooltip on hover */}
-                <span className="absolute bottom-full mb-1 text-white text-[10px] bg-black bg-opacity-70 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                  Updating soon
-                </span>
               </a>
             </div>
 
