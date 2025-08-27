@@ -29,7 +29,7 @@ try {
     if (fs.existsSync(sourcePdf)) {
       fs.copyFileSync(sourcePdf, buildPdf);
       console.log("Copied resume PDF to build folder");
-      
+
       // Verify PDF was copied and check size
       const stats = fs.statSync(buildPdf);
       console.log(`Resume PDF size: ${stats.size} bytes`);
