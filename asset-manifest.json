@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.684644d0.css",
+    "main.js": "/portfolio/static/js/main.be3db24b.js",
+    "static/media/blog6.png": "/portfolio/static/media/blog6.33ef8f00e89bd3cc1b1e.png",
+    "static/media/blog2.png": "/portfolio/static/media/blog2.5a54d1458003e764c320.png",
+    "static/media/blog1.png": "/portfolio/static/media/blog1.de9f006655aef9399a6b.png",
+    "static/media/wanderStay.png": "/portfolio/static/media/wanderStay.01173b6944bf805841eb.png",
+    "static/media/blog3.png": "/portfolio/static/media/blog3.6dac7250f69fd63aa487.png",
+    "static/media/blog4.png": "/portfolio/static/media/blog4.468f1e2a84e25c693860.png",
+    "static/media/blog5.png": "/portfolio/static/media/blog5.25f8641a5274ca8feb93.png",
+    "static/media/meetly.png": "/portfolio/static/media/meetly.4be0d3810873611eaa4c.png",
+    "static/media/stockflow.png": "/portfolio/static/media/stockflow.c7234b1d8be656067f6d.png",
+    "static/media/inquira.png": "/portfolio/static/media/inquira.87d609dba90e0d0d2880.png",
+    "static/media/dsasheet.png": "/portfolio/static/media/dsasheet.566fca0ff6071cdd3226.png",
+    "static/media/techhiveMockup.png": "/portfolio/static/media/techhiveMockup.338a2adb492af00f36f7.png",
+    "static/media/nqueen.png": "/portfolio/static/media/nqueen.55d00a7e71779f53facb.png",
+    "static/media/simon.png": "/portfolio/static/media/simon.858d4dacab367cdfe298.png",
+    "index.html": "/portfolio/index.html",
+    "main.684644d0.css.map": "/portfolio/static/css/main.684644d0.css.map",
+    "main.be3db24b.js.map": "/portfolio/static/js/main.be3db24b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.684644d0.css",
+    "static/js/main.be3db24b.js"
+  ]
+}
