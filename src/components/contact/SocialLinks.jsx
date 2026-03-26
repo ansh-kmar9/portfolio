@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
   FaEnvelope,
   FaDiscord,
   FaMapMarkerAlt,
@@ -35,8 +34,8 @@ const SocialLinks = () => {
       icon: <FaXTwitter className="text-white/90 text-lg" />,
       link: "https://x.com/anshkmar999",
       text: "@anshkmar999",
-    }, 
-    
+    },
+
     {
       name: "Discord",
       icon: <FaDiscord className="text-white/90 text-lg" />,
@@ -65,8 +64,8 @@ const SocialLinks = () => {
           </div>
         </div>
         <p className="text-white/70 text-sm leading-relaxed">
-          I'm always open to exciting opportunities and collaborations. Feel free
-          to reach out via any platform below.
+          I'm always open to exciting opportunities and collaborations. Feel
+          free to reach out via any platform below.
         </p>
       </div>
 

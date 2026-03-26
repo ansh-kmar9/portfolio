@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const StatsCard = ({ title, children, customClass = "" }) => (
   <div
@@ -241,8 +241,7 @@ const CodingProfiles = () => {
                   name: "CodeChef",
                   href: `https://www.codechef.com/users/${codechefUsername}`,
                   img: "https://img.icons8.com/?size=512&id=O4SEeX66BY8o&format=png",
-                  invert : true,
-                  
+                  invert: true,
                 },
                 {
                   name: "HackerRank",

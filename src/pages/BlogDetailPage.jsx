@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { FaTags, FaCalendarAlt } from "react-icons/fa";
+import { FaTags } from "react-icons/fa";
 import { getBlogById } from "../data/blogs";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import remarkGfm from 'remark-gfm'; // Add this import for table support
+import remarkGfm from "remark-gfm"; // Add this import for table support
 
 const BlogDetailPage = () => {
   const { blogId } = useParams();
@@ -24,11 +24,6 @@ const BlogDetailPage = () => {
 
   if (!blog) return null;
 
-  const formatDate = (dateString) => {
-    const options = { year: "numeric", month: "long", day: "numeric" };
-    return new Date(dateString).toLocaleDateString(undefined, options);
-  };
-
   return (
     <>
       <Helmet>
@@ -38,7 +33,6 @@ const BlogDetailPage = () => {
 
       <section className="pt-6 sm:pt-8 md:pt-12 px-4 sm:px-6">
         <div className="container mx-auto max-w-[98%] xs:max-w-[95%] sm:max-w-4xl">
-
           {/* Top Navigation */}
           <Link
             to="/blog"
@@ -179,12 +173,24 @@ const BlogDetailPage = () => {
                       );
                     },
                     p: ({ children }) => <p className="mb-6">{children}</p>,
-                    h1: ({ children }) => <h1 className="mt-12 mb-6">{children}</h1>,
-                    h2: ({ children }) => <h2 className="mt-10 mb-5">{children}</h2>,
-                    h3: ({ children }) => <h3 className="mt-8 mb-4">{children}</h3>,
-                    ul: ({ children }) => <ul className="my-6 space-y-2">{children}</ul>,
-                    ol: ({ children }) => <ol className="my-6 space-y-2">{children}</ol>,
-                    blockquote: ({ children }) => <blockquote className="my-8">{children}</blockquote>,
+                    h1: ({ children }) => (
+                      <h1 className="mt-12 mb-6">{children}</h1>
+                    ),
+                    h2: ({ children }) => (
+                      <h2 className="mt-10 mb-5">{children}</h2>
+                    ),
+                    h3: ({ children }) => (
+                      <h3 className="mt-8 mb-4">{children}</h3>
+                    ),
+                    ul: ({ children }) => (
+                      <ul className="my-6 space-y-2">{children}</ul>
+                    ),
+                    ol: ({ children }) => (
+                      <ol className="my-6 space-y-2">{children}</ol>
+                    ),
+                    blockquote: ({ children }) => (
+                      <blockquote className="my-8">{children}</blockquote>
+                    ),
                     table: ({ children }) => (
                       <div className="my-8 overflow-x-auto">
                         <div className="rounded-lg border border-[#262626] overflow-hidden">
@@ -195,9 +201,7 @@ const BlogDetailPage = () => {
                       </div>
                     ),
                     thead: ({ children }) => (
-                      <thead className="bg-[#1a1a1a]">
-                        {children}
-                      </thead>
+                      <thead className="bg-[#1a1a1a]">{children}</thead>
                     ),
                     tbody: ({ children }) => (
                       <tbody className="divide-y divide-[#262626] bg-[#0A0A0A]">
@@ -210,7 +214,10 @@ const BlogDetailPage = () => {
                       </tr>
                     ),
                     th: ({ children }) => (
-                      <th scope="col" className="px-6 py-4 text-left text-xs font-semibold text-white/90 uppercase tracking-wider whitespace-nowrap">
+                      <th
+                        scope="col"
+                        className="px-6 py-4 text-left text-xs font-semibold text-white/90 uppercase tracking-wider whitespace-nowrap"
+                      >
                         {children}
                       </th>
                     ),

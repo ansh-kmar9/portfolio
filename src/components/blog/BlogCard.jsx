@@ -6,11 +6,6 @@ import { FaLink } from "react-icons/fa";
 const BlogCard = ({ blog, index }) => {
   const [copied, setCopied] = useState(false);
 
-  const formatDate = (dateString) => {
-    const options = { year: "numeric", month: "long", day: "numeric" };
-    return new Date(dateString).toLocaleDateString(undefined, options);
-  };
-
   const handleCopyLink = () => {
     const blogUrl = `${window.location.origin}/blog/${blog.id}`;
     navigator.clipboard.writeText(blogUrl);

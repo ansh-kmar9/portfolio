@@ -15,7 +15,7 @@ const AboutPage = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
       setActiveSection("education");
     }
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   // Scroll to section when hash is present
   useEffect(() => {
@@ -183,7 +183,8 @@ const AboutPage = () => {
                       Want to know my story?
                     </h2>
                     <p className="text-xs sm:text-sm text-white/65 leading-relaxed">
-                      Read a short story about my journey, a boy who don't know what to do in life.
+                      Read a short story about my journey, a boy who don't know
+                      what to do in life.
                     </p>
                   </div>
 

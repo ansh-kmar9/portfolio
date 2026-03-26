@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
@@ -11,12 +10,12 @@ import {
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      // eslint-disable-next-line no-unused-vars
+      const scrollOffset = window.scrollY > 50;
     };
 
     window.addEventListener("scroll", handleScroll);
