@@ -63,6 +63,10 @@ const Hero = () => {
                     2000,
                     "Developer",
                     2000,
+                    "Editor",
+                    2000,
+                    "Freelancer",
+                    2000,
                   ]}
                   wrapper="span"
                   speed={50}
@@ -80,7 +84,7 @@ const Hero = () => {
             </div>
 
             <p className="text-sm sm:text-base text-white/70 max-w-lg leading-relaxed">
-              I'm a full-stack developer who loves crafting clean, scalable web
+              I'm a non-serious developer who loves crafting clean, scalable web
               applications. My goal is to build solutions that offer both
               exceptional performance and a delightful user experience.
             </p>

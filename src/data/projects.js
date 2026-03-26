@@ -7,8 +7,117 @@ import techhiveMockup from "../assets/images/techhiveMockup.png";
 import meetly from "../assets/images/meetly.png";
 import inquira from "../assets/images/inquira.png";
 import stockflow from "../assets/images/stockflow.png";
+import chatrax from "../assets/images/chatrax.png";
+import prepmate from "../assets/images/prepmate.png";
 
 export const projects = [
+  {
+  id: "prepmate",
+  title: "PrepMate",
+  description:
+    "A full-stack collaborative coding platform with real-time code editing, video calls, chat, DSA problem solving, and GitHub integration.",
+
+  image: prepmate,
+  tags: [
+    "MongoDB",
+    "Express.js",
+    "Node.js",
+    "React",
+    "Socket.io",
+    "Tailwind CSS",
+    "JWT Authentication",
+    "Google OAuth",
+    "Mongoose",
+    "Context API",
+    "REST APIs",
+    "Real-time Collaboration",
+    "Video Calling",
+    "Live Chat",
+    "DSA Problem Solving",
+    "Code Execution Engine",
+    "GitHub Integration",
+    "Session Persistence",
+    "Role-based Access",
+    "Responsive UI"
+  ],
+  demoLink: "https://prep-mates.vercel.app/", 
+  githubLink: "https://github.com/Abhi773925/compiler-design",
+  featured: true,
+  role: "Full-Stack Developer",
+  challenges:
+    "Designing low-latency multi-user collaboration with synchronized editor state, integrating stable WebRTC video calls across varying network conditions, implementing secure Google OAuth + JWT auth, and building a scalable architecture for sessions, files, chat, and problem execution with consistent UX across devices.",
+  solutions:
+    "Built a MERN-based platform using Socket.io for real-time collaboration and communication, integrated Google OAuth with JWT-based protected APIs, and implemented modular backend routes/models for auth, projects, sessions, files, and problems. Added collaborative rooms, live code updates, chat, video call signaling, and DSA workflows with execution/test support. Used React Context for global auth/theme/session state and Tailwind CSS with responsive layouts for a smooth cross-device experience.",
+
+  longDescription: `PrepMate is a production-style, full-stack collaborative coding platform built for interview preparation, pair programming, and interactive technical practice. It combines a real-time coding environment with communication and assessment tools so developers can code, discuss, and solve problems together in one workflow.
+
+Key Features & Highlights:
+
+- Real-time collaborative code editing with Socket.io room synchronization
+- Integrated video calling for pair programming and mock interviews
+- Built-in chat and communication tools for team coordination
+- Google OAuth login with JWT-secured backend APIs and protected routes
+- Session persistence with saved room/file state for continuity
+- DSA problem practice with LeetCode-style statements and test cases
+- Code execution engine for running and validating solutions
+- GitHub integration for repository/file workflows
+- Role-aware architecture with structured middleware, models, and routes
+- Responsive modern UI with theme support for better usability
+
+PrepMate demonstrates end-to-end full-stack engineering across authentication, real-time systems, collaborative UX, backend API design, and scalable project architecture. The platform emphasizes reliability, security, and developer experience, making it a strong portfolio project for modern software engineering roles.`
+},
+  {
+  id: "chatrax",
+  title: "ChatraX",
+  description:
+    "A full-stack real-time chat platform with secure authentication, friend request workflow, online presence, typing indicators.",
+
+  image: chatrax,
+  tags: [
+    "MongoDB",
+    "Express.js",
+    "Node.js",
+    "React",
+    "Socket.io",
+    "Tailwind CSS",
+    "JWT Authentication",
+    "Mongoose",
+    "Context API",
+    "REST APIs",
+    "Real-time Messaging",
+    "Friend Requests",
+    "Protected Routes",
+    "Role-based Access",
+    "Responsive UI",
+    "Cookie-based Sessions",
+    "Admin Panel",
+    "Modular Architecture"
+  ],
+  demoLink: "https://chatrax.vercel.app/", 
+  githubLink: "https://github.com/ansh-kmar9/chatrax", 
+  featured: true,
+  role: "Full-Stack Developer",
+  challenges:
+    "Building reliable real-time communication while enforcing friendship-based chat permissions, managing secure authentication with role-based access, synchronizing online/typing states across clients, and creating a responsive UX with robust validation and error handling.",
+  solutions:
+    "Implemented a MERN architecture with Socket.io for instant messaging and presence updates, secured APIs using JWT with HTTP-only cookies and middleware-protected routes, enforced friendship checks before chat access, and added admin-only endpoints for moderation and analytics. Used React Context API for auth/socket/theme state, Tailwind CSS for responsive UI, and Mongoose models with structured routes for maintainable, scalable backend logic.",
+
+  longDescription: `ChatraX is a production-style, full-stack real-time chat application designed for secure and engaging communication. It combines fast Socket.io-based messaging with a structured social workflow where users can discover others, send friend requests, and chat only after acceptance.
+
+Key Features & Highlights:
+
+- Real-time one-to-one messaging with Socket.io
+- Friend request system (send, accept, reject) before enabling chats
+- Online/offline user presence and live typing indicators
+- Secure JWT authentication with protected routes and role checks
+- HTTP-only cookie session flow with password hashing
+- Codename-based discovery with uniqueness validation
+- Responsive modern interface with dark/light theme support
+- Clear MERN architecture with modular models, routes, middleware, and socket handlers
+- REST APIs for auth, users, friends, and chats
+
+ChatraX demonstrates end-to-end full-stack capability across backend API design, real-time systems, authentication/authorization, and frontend state management. The project emphasizes security, maintainability, and user experience, making it a strong portfolio project for modern web engineering.`
+},
   {
     id: "stockflow",
     title: "StockFlow",
